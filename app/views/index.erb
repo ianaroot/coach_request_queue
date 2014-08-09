@@ -1,5 +1,22 @@
+<table>
+<tr>
+  <th>Date</th>
+  <th>Urgency</th>
+  <th>Time Available</th>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Phase</th>
+  <th>Remote Okay?</th>
+</tr>
 <% @requests.each do |req| %>
-  <%= req.to_yaml %>
-  <br>
-  <br>
+  <tr>
+    <td>req.date</td>
+    <td>req.urgency</td>
+    <td>req.time_avail</td>
+    <td>req.name</td>
+    <td>req.email</td>
+    <td>req.phase</td>
+    <td>req.remote_okay</td>
+  </tr>
 <% end %>
+</table>
