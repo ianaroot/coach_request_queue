@@ -19,6 +19,7 @@ post '/requests/create' do
   args[:phase] = params['Field7']
   args[:comments] = params['Field8']
   args[:name] = "#{params['Field3']} #{params['Field4']}"
+  args[:params] = params
   request = Request.new( args )
   request.save
 end
