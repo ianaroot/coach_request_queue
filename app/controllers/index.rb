@@ -3,6 +3,8 @@
 # .each do |request|
 #   puts "%s  (%-23s) %-20s [%s]" % [request.date, request.urgency_raw, request.name, request.phase]
 # end
+require 'ultrahook'
+require 'pry'
 
 post '/requests/create' do
   args = {}
@@ -19,7 +21,6 @@ post '/requests/create' do
   args[:phase] = params['Field7']
   args[:comments] = params['Field8']
   args[:name] = params['Field3']
-  # args[:params] = params
   request = Request.new( args )
   request.save
 end

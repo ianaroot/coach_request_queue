@@ -1,22 +1,25 @@
-require 'date'
+# == Schema Information
+#
+# Table name: requests
+#
+#  id         :integer          not null, primary key
+#  date       :string(255)
+#  urgency    :string(255)
+#  name       :string(255)
+#  email      :string(255)
+#  phase      :string(255)
+#  city       :string(255)
+#  time_avail :string(255)
+#  remote_ok  :boolean
+#  comments   :text
+#  params     :text
+#
 
 class Request < ActiveRecord::Base
+
   URGENCY = {'OMG, please help soon!' => 1,
              'this week please' => 2,
              'anytime this phase' => 3}
-  # attr_accessor :id, :date, :phase, :city
-  # def initialize( args = {} )
-  #   @name = args[:name]
-  #   @comments = args[:comments]
-  #   @phase = args[:phase]
-  #   @remote_ok = args[:remote_ok]
-  #   @city = args[:city]
-  #   @email = args[:email]
-  #   @date = args[:date]
-  #   @urgency = args[:urgency]
-  #   @time_avail = args[:time_avail]
-  # end
-
 
   def urgency
     URGENCY[@urgency]

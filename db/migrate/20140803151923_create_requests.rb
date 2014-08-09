@@ -10,6 +10,8 @@ class CreateRequests < ActiveRecord::Migration
       t.string :time_avail
       t.boolean :remote_ok
       t.text :comments
+
+      t.timestamps
     end
   end
 end
