@@ -10,13 +10,13 @@
 </tr>
 <% @requests.each do |req| %>
   <tr>
-    <td>req.date</td>
-    <td>req.urgency</td>
-    <td>req.time_avail</td>
-    <td>req.name</td>
-    <td>req.email</td>
-    <td>req.phase</td>
-    <td>req.remote_okay</td>
+    <td> <%= req.date %> </td>
+    <td> <%= req.urgency %> </td>
+    <td> <%= req.time_avail %> </td>
+    <td> <%= req.name %> </td>
+    <td> <%= req.email %> </td>
+    <td> <%= req.phase %> </td>
+    <td> <%= req.remote_okay %> </td>
   </tr>
 <% end %>
 </table>
