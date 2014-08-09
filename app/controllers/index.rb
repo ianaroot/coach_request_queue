@@ -31,3 +31,8 @@ get '/' do
   @requests = @requests.sort
   erb :index
 end
+
+get '/requests/:id' do
+  @request = Request.find(params[:id])
+  erb :show
+end

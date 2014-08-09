@@ -21,12 +21,12 @@ class Request < ActiveRecord::Base
              'this week please' => 2,
              'anytime this phase' => 3}
 
-  def urgency
-    URGENCY[@urgency]
+  def urgency_integer
+    URGENCY[urgency]
   end
 
-  def urgency_raw
-    @urgency
+  def pretty_date
+    Date.parse(date)
   end
 
   def print_date
@@ -36,7 +36,7 @@ class Request < ActiveRecord::Base
   def <=>(other)
     case other.date <=> self.date
     when 0
-      return self.urgency <=> other.urgency
+      return self.urgency_integer <=> other.urgency_integer
     else
       return other.date <=> self.date
     end
