@@ -15,7 +15,7 @@
 #  params     :text
 #
 
-class Request < ActiveRecord::Base
+class Entry < ActiveRecord::Base
 
   URGENCY = {'OMG, please help soon!' => 1,
              'this week please' => 2,

@@ -8,15 +8,15 @@
     <th>Phase</th>
     <th>Remote OK?</th>
   </tr>
-  <% @requests.each do |req| %>
+  <% @entries.each do |entry| %>
     <tr>
-      <td> <a href=<%="/requests/#{req.id}"%>> <%= req.pretty_date %> </a> </td>
-      <td> <a href=<%="/requests/#{req.id}"%>> <%= req.urgency %> </a> </td>
-      <td> <a href=<%="/requests/#{req.id}"%>> <%= req.time_avail %> </a> </td>
-      <td> <a href=<%="/requests/#{req.id}"%>> <%= req.name %> </a> </td>
-      <td> <a href=<%="/requests/#{req.id}"%>> <%= req.email %> </a> </td>
-      <td> <a href=<%="/requests/#{req.id}"%>> <%= req.phase %> </a> </td>
-      <td> <a href=<%="/requests/#{req.id}"%>> <%= req.remote_ok %> </a> </td>
+      <td> <a href=<%="/entries/#{entry.id}"%>> <%= entry.pretty_date %> </a> </td>
+      <td> <a href=<%="/entries/#{entry.id}"%>> <%= entry.urgency %> </a> </td>
+      <td> <a href=<%="/entries/#{entry.id}"%>> <%= entry.time_avail %> </a> </td>
+      <td> <a href=<%="/entries/#{entry.id}"%>> <%= entry.name %> </a> </td>
+      <td> <a href=<%="/entries/#{entry.id}"%>> <%= entry.email %> </a> </td>
+      <td> <a href=<%="/entries/#{entry.id}"%>> <%= entry.phase %> </a> </td>
+      <td> <a href=<%="/entries/#{entry.id}"%>> <%= entry.remote_ok %> </a> </td>
     </tr>
   <% end %>
 </table>

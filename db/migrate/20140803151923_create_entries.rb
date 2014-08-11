@@ -1,6 +1,6 @@
-class CreateRequests < ActiveRecord::Migration
+class CreateEntries < ActiveRecord::Migration
   def change
-    create_table :requests do |t|
+    create_table :entries do |t|
       t.string :date
       t.string :urgency
       t.string :name
