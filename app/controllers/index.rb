@@ -6,7 +6,7 @@
 require 'ultrahook'
 require 'pry'
 
-post '/entrys/create' do
+post '/entries/create' do
   args = {}
   args[:time_avail] = params['Field10']
   args[:urgency] = params['Field9']
